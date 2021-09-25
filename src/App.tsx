@@ -1,23 +1,32 @@
-import React from 'react';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import axios from "axios";
 
 function App() {
+  const [data, setData] = useState({ location: [] });
+  const [isError, setIsError] = useState(false);
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsError(false);
+      try {
+        const result = await axios(
+          "https://60a86644-548d-4cef-8618-9aaf8f8e8dbd.mock.pstmn.io/trips"
+        );
+        setData(result.data);
+        console.log(result.data);
+      } catch (error) {
+        setIsError(true);
+      }
+    };
+    fetchData();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ul>
+      {isError && <div>Something went wrong ...</div>}
+      {data.location.map((item: any) => (
+        <li key={item.id}>{item.title}</li>
+      ))}
+    </ul>
   );
 }
 
