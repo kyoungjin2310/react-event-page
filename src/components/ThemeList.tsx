@@ -1,7 +1,7 @@
 import React, { MouseEvent, useState, useEffect } from "react";
 import { Theme, ThemeData } from "../apis/type";
 import ThemeItem from "./ThemeItem";
-
+import { Link } from "react-router-dom";
 const ThemeList = ({ list }: any) => {
   const [arrNum, setNum] = useState(1);
   const onClick = (e: MouseEvent<HTMLAnchorElement>, id: number) => {
@@ -12,20 +12,22 @@ const ThemeList = ({ list }: any) => {
     console.log(list);
   }, [list]);
   return (
-    <div>
+    <ul className="ThemeList">
       {list.map((item: Theme) => (
-        <div key={item.id}>
-          <h3>
-            <a href="#" onClick={(e) => onClick(e, item.id)}>
+        <li key={item.id}>
+          <h3 className="themeLink">
+            <Link to="#" onClick={(e) => onClick(e, item.id)}>
               {item.tag}
-            </a>
+            </Link>
           </h3>
-          {item.id === arrNum
-            ? item.data.map((item: ThemeData) => <ThemeItem item={item} />)
-            : null}
-        </div>
+          <ul>
+            {item.id === arrNum
+              ? item.data.map((item: ThemeData) => <ThemeItem item={item} />)
+              : null}
+          </ul>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 

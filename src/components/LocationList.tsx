@@ -4,11 +4,11 @@ import LocationItem from "./LocationItem";
 
 const LocationList = ({ list }: any) => {
   return (
-    <div>
+    <ul>
       {list.map((item: Location) => (
         <LocationItem item={item} />
       ))}
-    </div>
+    </ul>
   );
 };
 

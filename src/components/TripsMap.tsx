@@ -2,8 +2,8 @@ import React from "react";
 
 const TripsMap = () => {
   return (
-    <div>
-      <h2>
+    <div className="map">
+      <h2 className="mapTitle">
         <span>제주 쉬기좋은</span>
         <span>지역별 안내</span>
       </h2>

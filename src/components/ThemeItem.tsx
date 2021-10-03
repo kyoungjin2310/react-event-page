@@ -3,7 +3,7 @@ import { url } from "../apis/api";
 
 const TicketItem = ({ item }: any) => {
   return (
-    <div>
+    <li>
       <h3>
         <span>{item.category}</span>
         <span>{item.title}</span>
@@ -20,7 +20,7 @@ const TicketItem = ({ item }: any) => {
           alt={`${item.category} ${item.title}`}
         />
       </p>
-    </div>
+    </li>
   );
 };
 
