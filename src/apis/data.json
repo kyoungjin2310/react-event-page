@@ -4,28 +4,32 @@
       "id": 1,
       "title": "제주 북동쪽",
       "description": "다양하게 볼 것이 많은 지역이다. 제주의 산과 바다를 다양하게 만나 볼 수 있고 두문포항을 우도를 갔다오기에 매력적이다.",
-      "sights": ["비자림", "산궁부리", "다람쉬오룸"]
+      "sights": ["비자림", "산궁부리", "다람쉬오룸"],
+      "img": "sea-4563224_1920_1.png"
     },
     {
       "id": 2,
       "title": "제주 북서쪽",
       "description": "해안 산책로와 드라이블 즐기기 좋은 지역이다. 이호테우, 해협 해변이 유명하며, 공항 가기 전 근처에 둘러볼 곳이 꽤 많다.",
-      "sights": ["도두봉", "이호테우 해변", "협재 해수욕장 등"]
+      "sights": ["도두봉", "이호테우 해변", "협재 해수욕장 등"],
+      "img": "words-988912_1920_1.png"
     },
     {
       "id": 3,
       "title": "서귀포 남동쪽",
       "description": "제주도 여행의 전통적인 유명 관광지가 많은 지역이다. 성산일출봉부터 섭지코지, 쇠소깍 등이 있으며, 자연과 테마가 어우러져 있다.",
-      "sights": ["성산일출봉, 섭지코지, 쇠소깍 등"]
+      "sights": ["성산일출봉, 섭지코지, 쇠소깍 등"],
+      "img": "nature-3277021_1920_1.png"
     },
     {
       "id": 4,
       "title": "서귀포 남서쪽",
       "description": "테마 위주의 제주 명소가 많은 지역이다. 식물원과 박물관, 체험장들이 많으며, 인생사진을 찍기 좋은 곳들이 많다.",
-      "sights": ["오설록, 카멜리아힐, 천지연폭포 등"]
+      "sights": ["오설록, 카멜리아힐, 천지연폭포 등"],
+      "img": "cheonjeyeon-falls-1594587_1280_1.png"
     }
   ],
-  "triptype": [
+  "themes": [
     {
       "id": 1,
       "tag": "#자연 #힐링",
@@ -36,8 +40,9 @@
           "title": "화조원 조류 동물원",
           "ticket_type": "입장권",
           "discount_percent": 20,
-          "price": 14000,
-          "discount_price": 11200
+          "ticket_price": 14000,
+          "discount_price": 11200,
+          "img": "썸네일.png"
         },
         {
           "id": 2,
@@ -45,8 +50,9 @@
           "title": "공룡랜드",
           "ticket_type": "입장권",
           "discount_percent": 36,
-          "price": 14000,
-          "discount_price": 11200
+          "ticket_price": 14000,
+          "discount_price": 11200,
+          "img": "썸네일1.png"
         },
         {
           "id": 3,
@@ -54,8 +60,9 @@
           "title": "피규어뮤지엄:이색전시",
           "ticket_type": "입장권",
           "discount_percent": 16,
-          "price": 14000,
-          "discount_price": 11200
+          "ticket_price": 14000,
+          "discount_price": 11200,
+          "img": "썸네일2.png"
         },
         {
           "id": 4,
@@ -63,8 +70,9 @@
           "title": "퍼시픽랜드 마린스테이지",
           "ticket_type": "입장권",
           "discount_percent": 12,
-          "price": 14000,
-          "discount_price": 11200
+          "ticket_price": 14000,
+          "discount_price": 11200,
+          "img": "nature-3277021_1920.png"
         }
       ]
     },
@@ -78,8 +86,9 @@
           "title": "화조원 조류 동물원",
           "ticket_type": "입장권",
           "discount_percent": 20,
-          "price": 14000,
-          "discount_price": 11200
+          "ticket_price": 14000,
+          "discount_price": 11200,
+          "img": "썸네일.png"
         },
         {
           "id": 2,
@@ -87,8 +96,9 @@
           "title": "공룡랜드",
           "ticket_type": "입장권",
           "discount_percent": 36,
-          "price": 14000,
-          "discount_price": 11200
+          "ticket_price": 14000,
+          "discount_price": 11200,
+          "img": "썸네일1.png"
         },
         {
           "id": 3,
@@ -96,8 +106,9 @@
           "title": "피규어뮤지엄:이색전시",
           "ticket_type": "입장권",
           "discount_percent": 16,
-          "price": 14000,
-          "discount_price": 11200
+          "ticket_price": 14000,
+          "discount_price": 11200,
+          "img": "썸네일2.png"
         },
         {
           "id": 4,
@@ -105,8 +116,9 @@
           "title": "퍼시픽랜드 마린스테이지",
           "ticket_type": "입장권",
           "discount_percent": 12,
-          "price": 14000,
-          "discount_price": 11200
+          "ticket_price": 14000,
+          "discount_price": 11200,
+          "img": "nature-3277021_1920.png"
         }
       ]
     },
@@ -120,8 +132,9 @@
           "title": "화조원 조류 동물원",
           "ticket_type": "입장권",
           "discount_percent": 20,
-          "price": 14000,
-          "discount_price": 11200
+          "ticket_price": 14000,
+          "discount_price": 11200,
+          "img": "썸네일.png"
         },
         {
           "id": 2,
@@ -129,8 +142,9 @@
           "title": "공룡랜드",
           "ticket_type": "입장권",
           "discount_percent": 36,
-          "price": 14000,
-          "discount_price": 11200
+          "ticket_price": 14000,
+          "discount_price": 11200,
+          "img": "썸네일1.png"
         },
         {
           "id": 3,
@@ -138,8 +152,9 @@
           "title": "피규어뮤지엄:이색전시",
           "ticket_type": "입장권",
           "discount_percent": 16,
-          "price": 14000,
-          "discount_price": 11200
+          "ticket_price": 14000,
+          "discount_price": 11200,
+          "img": "썸네일2.png"
         },
         {
           "id": 4,
@@ -147,8 +162,9 @@
           "title": "퍼시픽랜드 마린스테이지",
           "ticket_type": "입장권",
           "discount_percent": 12,
-          "price": 14000,
-          "discount_price": 11200
+          "ticket_price": 14000,
+          "discount_price": 11200,
+          "img": "nature-3277021_1920.png"
         }
       ]
     }

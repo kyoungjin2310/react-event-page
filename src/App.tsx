@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
+import dotenv from "dotenv";
+dotenv.config();
+
+axios.defaults.baseURL = process.env.REACT_APP_BASIC_SERVER_URL;
 
 function App() {
-  const [data, setData] = useState({ location: [], triptype: [] });
+  const [data, setData] = useState({ location: [], themes: [] });
   const [isError, setIsError] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       setIsError(false);
       try {
-        const result = await axios(
-          "https://60a86644-548d-4cef-8618-9aaf8f8e8dbd.mock.pstmn.io/trips"
-        );
+        const result = await axios.get("/trips");
         setData(result.data);
         console.log(result.data);
       } catch (error) {
@@ -32,7 +34,7 @@ function App() {
           </div>
         </div>
       ))}
-      {data.triptype.map((item: any) => (
+      {data.themes.map((item: any) => (
         <div key={item.id}>
           <h2>{item.tag}</h2>
           {item.data.map((item: any) => (
@@ -41,11 +43,11 @@ function App() {
                 <span>{item.category}</span>
                 <span>{item.title}</span>
               </h3>
-              <p>{item.reservation}</p>
-              <p>{item.discount}</p>
+              <p>{item.ticket_type}</p>
+              <p>{item.discount_percent}</p>
               <p>
-                <span>{item.price}</span>
-                <span>{item.discountprice}</span>
+                <span>{item.ticket_price}</span>
+                <span>{item.discount_price}</span>
               </p>
             </div>
           ))}
