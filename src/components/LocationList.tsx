@@ -6,7 +6,7 @@ const LocationList = ({ list }: any) => {
   return (
     <ul>
       {list.map((item: Location) => (
-        <LocationItem item={item} />
+        <LocationItem item={item} key={list.id} />
       ))}
     </ul>
   );

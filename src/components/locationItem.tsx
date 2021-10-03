@@ -3,7 +3,7 @@ import { url } from "../apis/api";
 
 const LocationItem = ({ item }: any) => {
   return (
-    <li key={item.id} className="locationList">
+    <li className="locationList">
       <div>
         <h3 className="locationTitle">{item.title}</h3>
         <p>{item.description}</p>

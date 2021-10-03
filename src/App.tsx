@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./App.css";
+import "./assets/css/main.scss";
 import axios from "axios";
 import TripsMap from "./components/TripsMap";
 import TitlePage from "./components/TitlePage";

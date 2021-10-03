@@ -1,0 +1,43 @@
+//font
+$NotoSans: "Noto Sans KR", sans-serif;
+$Roboto: "Roboto", sans-serif;
+$Rowdies: "Rowdies", sans-serif;
+
+//color:
+
+//common
+body {
+  font-family: $NotoSans;
+  font-size: 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+div,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.wrap {
+  margin: 50px auto;
+  max-width: 414px;
+  background-color: #fef2c6;
+}
+
+//인생제주
+.main {
+  background-color: #fef8ea;
+}
+
+.mainSubTitle {
+}
