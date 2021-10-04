@@ -19,7 +19,9 @@ const ThemeList = ({ list }: any) => {
       <ul className="themeList">
         {list.map((item: Theme) => (
           <li key={item.id}>
-            <h3 className="themeLink">
+            <h3
+              className={item.id === arrNum ? "themeLink active" : "themeLink"}
+            >
               <a href="#" onClick={(e) => onClick(e, item.id)}>
                 {item.tag}
               </a>

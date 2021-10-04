@@ -79,7 +79,8 @@ img {
 .mainTitle .title {
   color: #ea6327;
   font-size: 79px;
-  letter-spacing: -5px;
+  letter-spacing: -3px;
+  font-weight: 800;
   line-height: 79px;
   -webkit-text-stroke: 1px #d25c27;
 }
@@ -238,15 +239,23 @@ img {
   border-top: 1px solid #c45722;
   border-bottom: 1px solid #c45722;
   border-right: 1px solid #c45722;
+  transition: 0.25s background-color ease;
 }
-
+.themeLink.active {
+  background-color: #ec7742;
+}
 li:first-child .themeLink {
   border-left: 1px solid #c45722;
 }
 
 .themeLink a {
+  display: block;
   line-height: 35px;
   color: #c65d29;
+  transition: 0.25s color ease;
+}
+.themeLink.active a {
+  color: #fff;
 }
 
 .themeItem {
