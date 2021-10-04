@@ -4,9 +4,9 @@ import LocationItem from "./LocationItem";
 
 const LocationList = ({ list }: any) => {
   return (
-    <ul>
-      {list.map((item: Location) => (
-        <LocationItem item={item} key={list.id} />
+    <ul className="locationList">
+      {list.map((item: Location, index: number) => (
+        <LocationItem item={item} index={index} key={list.id} />
       ))}
     </ul>
   );
