@@ -11,24 +11,27 @@ const ThemeList = ({ list }: any) => {
     console.log(list);
   }, [list]);
   return (
-    <ul className="ThemeList">
-      {list.map((item: Theme) => (
-        <li key={item.id}>
-          <h3 className="themeLink">
-            <a href="#" onClick={(e) => onClick(e, item.id)}>
-              {item.tag}
-            </a>
-          </h3>
-          <ul>
-            {item.id === arrNum
-              ? item.data.map((item: ThemeData) => (
-                  <ThemeItem item={item} key={item.id} />
-                ))
-              : null}
-          </ul>
-        </li>
-      ))}
-    </ul>
+    <div>
+      <h2 className="ThemeTitle"># 내가 원하는 제주 여행은?</h2>
+      <ul className="ThemeList">
+        {list.map((item: Theme) => (
+          <li key={item.id}>
+            <h3 className="themeLink">
+              <a href="#" onClick={(e) => onClick(e, item.id)}>
+                {item.tag}
+              </a>
+            </h3>
+            <ul>
+              {item.id === arrNum
+                ? item.data.map((item: ThemeData) => (
+                    <ThemeItem item={item} key={item.id} />
+                  ))
+                : null}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 

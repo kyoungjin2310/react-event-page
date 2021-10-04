@@ -14,7 +14,7 @@ const LocationItem = ({ item, index }: LocationItemProps) => {
           <span>{item.title}</span>
         </h3>
         <p>{item.description}</p>
-        <p>추천명소 : {item.sights}</p>
+        <p className="color">추천명소 : {item.sights}</p>
         <p className="img">
           <img src={`${url}img/${item.img}`} alt={`${item.title}`} />
         </p>

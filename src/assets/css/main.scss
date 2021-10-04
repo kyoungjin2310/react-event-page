@@ -141,6 +141,7 @@ img {
 
 //지역별 안내 목록
 .locationTitle {
+  margin-bottom: 10px;
   font-size: 22px;
   line-height: 22px;
   letter-spacing: -0.6px;
@@ -187,4 +188,8 @@ img {
 
 .locationList .even .img {
   right: 0;
+}
+
+.locationList .color {
+  color: #62931f;
 }
