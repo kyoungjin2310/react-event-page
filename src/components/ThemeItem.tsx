@@ -1,8 +1,8 @@
 import React from "react";
 import { url } from "../apis/api";
 
-function numberWithCommas(x: number) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+function numberWithCommas(num: number) {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 const TicketItem = ({ item }: any) => {
