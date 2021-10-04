@@ -1,19 +1,22 @@
 import React, { MouseEvent, useState, useEffect } from "react";
 import { Theme, ThemeData } from "../apis/type";
 import ThemeItem from "./ThemeItem";
+
 const ThemeList = ({ list }: any) => {
   const [arrNum, setNum] = useState(1);
   const onClick = (e: MouseEvent<HTMLAnchorElement>, id: number) => {
     e.preventDefault();
     setNum(id);
   };
+
   useEffect(() => {
     console.log(list);
   }, [list]);
+
   return (
-    <div>
-      <h2 className="ThemeTitle"># 내가 원하는 제주 여행은?</h2>
-      <ul className="ThemeList">
+    <div className="theme">
+      <h2 className="themeTitle"># 내가 원하는 제주 여행은?</h2>
+      <ul className="themeList">
         {list.map((item: Theme) => (
           <li key={item.id}>
             <h3 className="themeLink">
@@ -21,16 +24,19 @@ const ThemeList = ({ list }: any) => {
                 {item.tag}
               </a>
             </h3>
-            <ul>
-              {item.id === arrNum
-                ? item.data.map((item: ThemeData) => (
-                    <ThemeItem item={item} key={item.id} />
-                  ))
-                : null}
-            </ul>
+            {item.id === arrNum ? (
+              <ul className="themeItem">
+                {item.data.map((item: ThemeData) => (
+                  <ThemeItem item={item} key={item.id} />
+                ))}
+              </ul>
+            ) : null}
           </li>
         ))}
       </ul>
+      <a href="#" className="btn">
+        제주 상품 더 보기
+      </a>
     </div>
   );
 };
