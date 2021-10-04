@@ -1,24 +1,34 @@
 import React from "react";
 import { url } from "../apis/api";
 
+function numberWithCommas(x: number) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 const TicketItem = ({ item }: any) => {
   return (
     <li>
-      <h3>
-        <span>{item.category}</span>
-        <span>{item.title}</span>
-      </h3>
-      <p>{item.ticket_type}</p>
-      <p>{item.discount_percent}</p>
-      <p>
-        <span>{item.ticket_price}</span>
-        <span>{item.discount_price}</span>
-      </p>
-      <p>
+      <div className="img">
         <img
           src={`${url}img/${item.img}`}
           alt={`${item.category} ${item.title}`}
         />
+      </div>
+      <p className="ticket">
+        {item.ticket_type}
+        <span>{item.discount_percent}%</span>
+      </p>
+      <h3 className="title">
+        <span className="fontSize">[{item.category}]</span>
+        <span>{item.title}</span>
+      </h3>
+      <p className="price">
+        <span className="ticketPrice">
+          <em>{numberWithCommas(item.ticket_price)}</em>원
+        </span>
+        <span className="discount">
+          <em>{numberWithCommas(item.discount_price)}</em>원
+        </span>
       </p>
     </li>
   );

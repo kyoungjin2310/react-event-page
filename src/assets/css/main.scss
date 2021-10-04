@@ -28,11 +28,20 @@ a {
   font-weight: normal;
 }
 
+a {
+  text-decoration: none;
+}
+
 li {
   list-style: none;
 }
 
+em {
+  font-style: normal;
+}
+
 img {
+  vertical-align: top;
   width: 100%;
 }
 
@@ -53,7 +62,7 @@ img {
 .mainTitle {
   margin-top: 86px;
   display: inline-block;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .mainTitle span {
@@ -111,7 +120,7 @@ img {
   margin-bottom: 15px;
   font-size: 20px;
   letter-spacing: -0.5px;
-  font-weight: 600;
+  font-weight: 700;
   color: #000;
   text-shadow: 0px 4px 3px rgba($color: #000, $alpha: 0.2);
 }
@@ -145,7 +154,7 @@ img {
   font-size: 22px;
   line-height: 22px;
   letter-spacing: -0.6px;
-  font-weight: 600;
+  font-weight: 700;
   color: #000;
 }
 
@@ -192,4 +201,138 @@ img {
 
 .locationList .color {
   color: #62931f;
+}
+
+//내가 원하는 제주 여행은
+
+.theme {
+  overflow: hidden;
+}
+
+.themeTitle {
+  margin-top: 32px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: #020102;
+  text-align: center;
+}
+
+.themeList {
+  position: relative;
+  height: 542px;
+  margin: 0 30px;
+}
+
+.themeList > li {
+  width: 33.33%;
+  float: left;
+}
+
+.themeLink {
+  background-color: #fff;
+  height: 35px;
+  text-align: center;
+  font-weight: 300;
+  border-top: 1px solid #c45722;
+  border-bottom: 1px solid #c45722;
+  border-right: 1px solid #c45722;
+}
+
+li:first-child .themeLink {
+  border-left: 1px solid #c45722;
+}
+
+.themeLink a {
+  line-height: 35px;
+  color: #c65d29;
+}
+
+.themeItem {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  padding: 0 15px 22px 0;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.themeItem li {
+  float: left;
+  width: 50%;
+  margin-top: 22px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.themeItem .img {
+  margin-bottom: 14px;
+}
+
+.themeItem .ticket {
+  position: relative;
+  margin-bottom: 5px;
+  color: #000;
+  overflow: hidden;
+}
+
+.themeItem .ticket span {
+  float: right;
+  padding: 0 4px;
+  line-height: 14px;
+  border-radius: 14px;
+  background-color: #eb6226;
+  color: #fff;
+  font-family: $Rowdies;
+}
+
+.themeItem .title span {
+  display: block;
+  margin-bottom: 13px;
+  color: #010101;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+}
+.themeItem .title span.fontSize {
+  margin-bottom: 0px;
+  font-size: 15px;
+}
+
+.themeItem .price {
+  line-height: 18px;
+  letter-spacing: -0.7px;
+  color: #4f4f4f;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.themeItem .discount {
+  text-decoration: none;
+  font-weight: 700;
+  color: #010101;
+}
+
+.themeItem .discount em {
+  margin-left: 5px;
+  font-family: $Rowdies;
+  font-weight: 900;
+  letter-spacing: -0.7px;
+}
+
+.theme a.btn {
+  display: block;
+  margin: 41px auto 44px;
+  width: 220px;
+  height: 40px;
+  border-radius: 40px;
+  letter-spacing: -0.7px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  background-color: #d9463e;
 }
