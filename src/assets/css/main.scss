@@ -315,10 +315,13 @@ li:first-child .themeLink {
   letter-spacing: -0.7px;
   color: #4f4f4f;
   font-size: 14px;
+}
+
+.ticketPrice {
   text-decoration: line-through;
 }
 
-.themeItem .discount {
+.themeItem span.discount {
   text-decoration: none;
   font-weight: 700;
   color: #010101;
