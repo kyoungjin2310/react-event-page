@@ -57,40 +57,46 @@ img {
   background-color: #fef8ea;
   height: 443px;
   text-align: center;
+
+  .img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
 }
 
 .mainTitle {
   margin-top: 86px;
   display: inline-block;
   font-weight: 700;
-}
 
-.mainTitle span {
-  display: block;
-}
+  span {
+    display: block;
+  }
 
-.mainTitle .txt {
-  color: #eb6223;
-  font-size: 12px;
-  line-height: 15px;
-  text-align: right;
-}
+  .jeju {
+    text-align: left;
+    img {
+      width: auto;
+    }
+  }
 
-.mainTitle .title {
-  color: #ea6327;
-  font-size: 79px;
-  letter-spacing: -3px;
-  font-weight: 800;
-  line-height: 79px;
-  -webkit-text-stroke: 1px #d25c27;
-}
+  .title {
+    color: #ea6327;
+    font-size: 79px;
+    letter-spacing: -3px;
+    font-weight: 800;
+    line-height: 79px;
+    -webkit-text-stroke: 1px #d25c27;
+  }
 
-.mainTitle .jeju {
-  text-align: left;
-}
-
-.mainTitle .jeju img {
-  width: auto;
+  .txt {
+    color: #eb6223;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+  }
 }
 
 .mainSubTitle {
@@ -104,16 +110,28 @@ img {
   color: #23672a;
 }
 
-.main .img {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
 //제주 지역별 안내
 .map {
   text-align: center;
+
+  p {
+    margin-bottom: 68px;
+    text-align: right;
+    margin-right: 68px;
+    color: #444034;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    text-shadow: 0px 4px 3px rgba($color: #000, $alpha: 0.2);
+  }
+
+  img {
+    max-width: 350px;
+  }
+
+  .img {
+    margin: 0 0 34px;
+    text-align: center;
+  }
 }
 
 .mapTitle {
@@ -124,29 +142,10 @@ img {
   font-weight: 700;
   color: #000;
   text-shadow: 0px 4px 3px rgba($color: #000, $alpha: 0.2);
-}
 
-.mapTitle .color {
-  color: #518b0e;
-}
-
-.map p {
-  margin-bottom: 68px;
-  text-align: right;
-  margin-right: 68px;
-  color: #444034;
-  font-weight: 400;
-  letter-spacing: -0.5px;
-  text-shadow: 0px 4px 3px rgba($color: #000, $alpha: 0.2);
-}
-
-.map .img {
-  margin: 0 0 34px;
-  text-align: center;
-}
-
-.map img {
-  max-width: 350px;
+  .color {
+    color: #518b0e;
+  }
 }
 
 //지역별 안내 목록
@@ -157,57 +156,62 @@ img {
   letter-spacing: -0.6px;
   font-weight: 700;
   color: #000;
-}
 
-.locationTitle .num {
-  color: #ee5714;
-  font-family: $Roboto;
+  .num {
+    color: #ee5714;
+    font-family: $Roboto;
+  }
 }
 
 .locationList {
   margin: 0 29px;
-}
-
-.locationList li {
-  position: relative;
-  min-height: 100px;
-  margin-bottom: 42px;
-}
-
-.locationList li p {
-  line-height: 1.3em;
-}
-
-.locationList li .img {
-  position: absolute;
-  top: -5px;
-}
-
-//124
-.locationList .odd {
-  padding-left: 124px;
-}
-
-.locationList .even {
-  padding-right: 124px;
-}
-
-.locationList .odd .img {
-  left: 0;
-}
-
-.locationList .even .img {
-  right: 0;
-}
-
-.locationList .color {
-  color: #62931f;
+  li {
+    position: relative;
+    min-height: 100px;
+    margin-bottom: 42px;
+  }
+  p {
+    line-height: 1.3em;
+  }
+  .img {
+    position: absolute;
+    top: -5px;
+  }
+  .color {
+    color: #62931f;
+  }
+  .odd {
+    padding-left: 124px;
+    .img {
+      left: 0;
+    }
+  }
+  .even {
+    padding-right: 124px;
+    .img {
+      right: 0;
+    }
+  }
 }
 
 //내가 원하는 제주 여행은
 
 .theme {
   overflow: hidden;
+  a.btn {
+    display: block;
+    margin: 41px auto 44px;
+    width: 220px;
+    height: 40px;
+    border-radius: 40px;
+    letter-spacing: -0.7px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    background-color: #d9463e;
+  }
 }
 
 .themeTitle {
@@ -229,6 +233,11 @@ img {
 .themeList > li {
   width: 33.33%;
   float: left;
+  &:first-child {
+    .themeLink {
+      border-left: 1px solid #c45722;
+    }
+  }
 }
 
 .themeLink {
@@ -244,18 +253,19 @@ img {
 .themeLink.active {
   background-color: #ec7742;
 }
-li:first-child .themeLink {
-  border-left: 1px solid #c45722;
-}
 
-.themeLink a {
-  display: block;
-  line-height: 35px;
-  color: #c65d29;
-  transition: 0.25s color ease;
+.themeLink {
+  a {
+    display: block;
+    line-height: 35px;
+    color: #c65d29;
+    transition: 0.25s color ease;
+  }
 }
-.themeLink.active a {
-  color: #fff;
+.themeLink.active {
+  a {
+    color: #fff;
+  }
 }
 
 .themeItem {
@@ -265,86 +275,68 @@ li:first-child .themeLink {
   padding: 0 15px 22px 0;
   background-color: #fff;
   border-radius: 10px;
-}
-
-.themeItem li {
-  float: left;
-  width: 50%;
-  margin-top: 22px;
-  padding-left: 15px;
-  box-sizing: border-box;
-}
-
-.themeItem .img {
-  margin-bottom: 14px;
-}
-
-.themeItem .ticket {
-  position: relative;
-  margin-bottom: 5px;
-  color: #000;
-  overflow: hidden;
-}
-
-.themeItem .ticket span {
-  float: right;
-  padding: 0 4px;
-  line-height: 14px;
-  border-radius: 14px;
-  background-color: #eb6226;
-  color: #fff;
-  font-family: $Rowdies;
-}
-
-.themeItem .title span {
-  display: block;
-  margin-bottom: 13px;
-  color: #010101;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 700;
-  letter-spacing: -0.7px;
-}
-.themeItem .title span.fontSize {
-  margin-bottom: 0px;
-  font-size: 15px;
-}
-
-.themeItem .price {
-  line-height: 18px;
-  letter-spacing: -0.7px;
-  color: #4f4f4f;
-  font-size: 14px;
+  li {
+    float: left;
+    width: 50%;
+    margin-top: 22px;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+  .img {
+    margin-bottom: 14px;
+  }
+  .ticket {
+    position: relative;
+    margin-bottom: 5px;
+    color: #000;
+    overflow: hidden;
+    span {
+      float: right;
+      padding: 0 4px;
+      line-height: 14px;
+      border-radius: 14px;
+      background-color: #eb6226;
+      color: #fff;
+      font-family: $Rowdies;
+    }
+  }
+  .title {
+    span {
+      display: block;
+      margin-bottom: 13px;
+      color: #010101;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 700;
+      letter-spacing: -0.7px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .fontSize {
+      margin-bottom: 0px;
+      font-size: 15px;
+    }
+  }
+  .price {
+    line-height: 18px;
+    letter-spacing: -0.7px;
+    color: #4f4f4f;
+    font-size: 14px;
+  }
+  .discount {
+    text-decoration: none;
+    font-weight: 700;
+    color: #010101;
+    em {
+      margin-left: 5px;
+      font-family: $Rowdies;
+      font-weight: 900;
+      letter-spacing: -0.7px;
+    }
+  }
 }
 
 .ticketPrice {
   text-decoration: line-through;
-}
-
-.themeItem span.discount {
-  text-decoration: none;
-  font-weight: 700;
-  color: #010101;
-}
-
-.themeItem .discount em {
-  margin-left: 5px;
-  font-family: $Rowdies;
-  font-weight: 900;
-  letter-spacing: -0.7px;
-}
-
-.theme a.btn {
-  display: block;
-  margin: 41px auto 44px;
-  width: 220px;
-  height: 40px;
-  border-radius: 40px;
-  letter-spacing: -0.7px;
-  line-height: 40px;
-  text-align: center;
-  font-size: 14px;
-  color: #fff;
-  font-weight: 700;
-  background-color: #d9463e;
 }
