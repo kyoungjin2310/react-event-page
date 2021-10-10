@@ -8,7 +8,7 @@ function numberWithCommas(num: number) {
 const TicketItem = ({ item }: any) => {
   return (
     <li>
-      <div className="img">
+      <div className="ticketImg">
         <img
           src={`${url}img/${item.img}`}
           alt={`${item.category} ${item.title}`}

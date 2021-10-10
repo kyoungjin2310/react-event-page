@@ -12,7 +12,7 @@ const TitlePage = () => {
         <span className="title">인생제주</span>
       </h1>
       <h2 className="mainSubTitle">COTRIP</h2>
-      <img className="img" src={`${url}img/사진.png`} alt="인생제주" />
+      <img className="mainImg" src={`${url}img/사진.png`} alt="인생제주" />
     </div>
   );
 };
