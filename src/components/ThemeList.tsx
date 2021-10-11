@@ -1,7 +1,7 @@
 import React, { MouseEvent, useState, useEffect } from "react";
 import { Theme, ThemeData } from "../apis/type";
 import ThemeItem from "./ThemeItem";
-
+import Button from "../components/Button/Button";
 const ThemeList = ({ list }: any) => {
   const [arrNum, setNum] = useState(1);
   const onClick = (e: MouseEvent<HTMLAnchorElement>, id: number) => {
@@ -36,9 +36,7 @@ const ThemeList = ({ list }: any) => {
           </li>
         ))}
       </ul>
-      <a href="#" className="btn">
-        제주 상품 더 보기
-      </a>
+      <Button>제주 상품 더 보기</Button>
     </div>
   );
 };

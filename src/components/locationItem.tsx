@@ -1,5 +1,7 @@
 import React from "react";
 import { url } from "../apis/api";
+import List from "./List/List";
+
 type LocationItemProps = {
   item: any;
   index: number;
@@ -7,19 +9,14 @@ type LocationItemProps = {
 
 const LocationItem = ({ item, index }: LocationItemProps) => {
   return (
-    <li className={index % 2 === 0 ? "odd" : "even"}>
-      <div>
-        <h3 className="locationTitle">
-          <span className="num">{`0${index + 1}. `}</span>
-          <span>{item.title}</span>
-        </h3>
-        <p>{item.description}</p>
-        <p className="fontColorGreen">추천명소 : {item.sights}</p>
-        <p className="locationImg">
-          <img src={`${url}img/${item.img}`} alt={`${item.title}`} />
-        </p>
-      </div>
-    </li>
+    <List
+      index={`0${index + 1}. `}
+      title={item.title}
+      description={item.description}
+      sightsTitle={"추천명소 : "}
+      sights={item.sights}
+      img={`${url}img/${item.img}`}
+    ></List>
   );
 };
 

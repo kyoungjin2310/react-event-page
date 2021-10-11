@@ -1,36 +1,27 @@
 import React from "react";
 import { url } from "../apis/api";
+import Card from "./Card/Card";
+import { ThemeData } from "../apis/type";
+type TicketItemType = {
+  item: ThemeData;
+};
 
 function numberWithCommas(num: number) {
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-const TicketItem = ({ item }: any) => {
+const TicketItem = ({ item }: TicketItemType) => {
   return (
-    <li>
-      <div className="ticketImg">
-        <img
-          src={`${url}img/${item.img}`}
-          alt={`${item.category} ${item.title}`}
-        />
-      </div>
-      <p className="ticket">
-        {item.ticket_type}
-        <span>{item.discount_percent}%</span>
-      </p>
-      <h3 className="title">
-        <span className="fontSize">[{item.category}]</span>
-        <span>{item.title}</span>
-      </h3>
-      <p className="price">
-        <span className="ticketPrice">
-          <em>{numberWithCommas(item.ticket_price)}</em>원
-        </span>
-        <span className="discount">
-          <em>{numberWithCommas(item.discount_price)}</em>원
-        </span>
-      </p>
-    </li>
+    <Card
+      imgUrl={`${url}img/${item.img}`}
+      imgAlt={`${item.category} ${item.title}`}
+      ticketType={item.ticket_type}
+      discountPercent={item.discount_percent + "%"}
+      category={item.category}
+      title={item.title}
+      ticketPrice={numberWithCommas(item.ticket_price)}
+      discountPrice={numberWithCommas(item.discount_price)}
+    ></Card>
   );
 };
 
