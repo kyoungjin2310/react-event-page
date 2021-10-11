@@ -5,7 +5,7 @@ const StyledList = styled.li`
   position: relative;
   min-height: 100px;
   margin-bottom: 42px;
-
+  letter-spacing: -0.7px;
   .odd {
     padding-left: 124px;
     .locationImg {
