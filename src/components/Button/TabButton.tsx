@@ -6,10 +6,18 @@ const StyledTabButton = styled.h3`
   height: 35px;
   text-align: center;
   font-weight: 300;
-  border-top: 1px solid #c45722;
-  border-bottom: 1px solid #c45722;
-  border-right: 1px solid #c45722;
   transition: 0.25s background-color ease;
+
+  /* 색상 */
+  ${(props: any) => {
+    const selected = props.bdColor;
+    return css`
+      border-top: 1px solid ${selected};
+      border-bottom: 1px solid ${selected};
+      border-right: 1px solid ${selected};
+    `;
+  }}
+
   a {
     display: block;
     line-height: 35px;
@@ -28,7 +36,7 @@ function TabButton({ children, ...rest }: any) {
 }
 
 TabButton.defaultProps = {
-  color: "#d9463e",
+  bdColor: "#c45722",
 };
 
 export default TabButton;
