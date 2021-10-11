@@ -2,7 +2,12 @@ import React, { MouseEvent, useState, useEffect } from "react";
 import { Theme, ThemeData } from "../apis/type";
 import ThemeItem from "./ThemeItem";
 import Button from "../components/Button/Button";
-const ThemeList = ({ list }: any) => {
+
+type ThemeListProps = {
+  list: Theme[];
+};
+
+const ThemeList = ({ list }: ThemeListProps) => {
   const [arrNum, setNum] = useState(1);
   const onClick = (e: MouseEvent<HTMLAnchorElement>, id: number) => {
     e.preventDefault();

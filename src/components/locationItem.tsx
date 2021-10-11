@@ -1,9 +1,10 @@
 import React from "react";
 import { url } from "../apis/api";
 import List from "./List/List";
+import { Location } from "../apis/type";
 
 type LocationItemProps = {
-  item: any;
+  item: Location;
   index: number;
 };
 

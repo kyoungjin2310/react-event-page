@@ -65,6 +65,7 @@ const StyledCard = styled.li`
     text-decoration: line-through;
   }
 `;
+
 function Card({ children, ...rest }: any) {
   return (
     <StyledCard {...rest}>
@@ -87,6 +88,7 @@ function Card({ children, ...rest }: any) {
           <em>{rest.discountPrice}</em>원
         </span>
       </p>
+      {children}
     </StyledCard>
   );
 }
