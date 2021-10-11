@@ -2,6 +2,7 @@ import React, { MouseEvent, useState, useEffect } from "react";
 import { Theme, ThemeData } from "../apis/type";
 import ThemeItem from "./ThemeItem";
 import Button from "../components/Button/Button";
+import TabButton from "../components/Button/TabButton";
 
 type ThemeListProps = {
   list: Theme[];
@@ -24,13 +25,13 @@ const ThemeList = ({ list }: ThemeListProps) => {
       <ul className="themeList">
         {list.map((item: Theme) => (
           <li key={item.id}>
-            <h3
+            <TabButton
               className={item.id === arrNum ? "themeLink active" : "themeLink"}
             >
               <a href="#" onClick={(e) => onClick(e, item.id)}>
                 {item.tag}
               </a>
-            </h3>
+            </TabButton>
             {item.id === arrNum ? (
               <ul className="themeItem">
                 {item.data.map((item: ThemeData) => (

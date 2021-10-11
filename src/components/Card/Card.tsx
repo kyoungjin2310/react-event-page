@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 const StyledCard = styled.li`
   float: left;
   width: 50%;
@@ -69,25 +69,27 @@ const StyledCard = styled.li`
 function Card({ children, ...rest }: any) {
   return (
     <StyledCard {...rest}>
-      <div className="ticketImg">
-        <img src={rest.imgUrl} alt={rest.imgAlt} />
-      </div>
-      <p className="ticket">
-        {rest.ticketType}
-        <span>{rest.discountPercent}</span>
-      </p>
-      <h3 className="title">
-        <span className="fontSize">[{rest.category}]</span>
-        <span>{rest.title}</span>
-      </h3>
-      <p className="price">
-        <span className="ticketPrice">
-          <em>{rest.ticketPrice}</em>원
-        </span>
-        <span className="discount">
-          <em>{rest.discountPrice}</em>원
-        </span>
-      </p>
+      <a href="#" title={`${rest.category} ${rest.title}`}>
+        <p className="ticketImg">
+          <img src={rest.imgUrl} alt={rest.imgAlt} />
+        </p>
+        <p className="ticket">
+          {rest.ticketType}
+          <span>{rest.discountPercent}</span>
+        </p>
+        <h3 className="title">
+          <span className="fontSize">[{rest.category}]</span>
+          <span>{rest.title}</span>
+        </h3>
+        <p className="price">
+          <span className="ticketPrice">
+            <em>{rest.ticketPrice}</em>원
+          </span>
+          <span className="discount">
+            <em>{rest.discountPrice}</em>원
+          </span>
+        </p>
+      </a>
       {children}
     </StyledCard>
   );
