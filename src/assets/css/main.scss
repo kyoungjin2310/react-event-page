@@ -250,22 +250,17 @@ img {
   border-bottom: 1px solid #c45722;
   border-right: 1px solid #c45722;
   transition: 0.25s background-color ease;
-}
-.themeLink.active {
-  background-color: #ec7742;
-}
-
-.themeLink {
   a {
     display: block;
     line-height: 35px;
     color: #c65d29;
     transition: 0.25s color ease;
   }
-}
-.themeLink.active {
-  a {
-    color: #fff;
+  &.active {
+    background-color: #ec7742;
+    a {
+      color: #fff;
+    }
   }
 }
 
