@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-const StyledTabButton = styled.h3`
+const StyledTabMenu = styled.h3`
   background-color: #fff;
   height: 35px;
   text-align: center;
@@ -31,12 +31,12 @@ const StyledTabButton = styled.h3`
     }
   }
 `;
-function TabButton({ children, ...rest }: any) {
-  return <StyledTabButton {...rest}>{children}</StyledTabButton>;
+function TabMenu({ children, ...rest }: any) {
+  return <StyledTabMenu {...rest}>{children}</StyledTabMenu>;
 }
 
-TabButton.defaultProps = {
+TabMenu.defaultProps = {
   bdColor: "#c45722",
 };
 
-export default TabButton;
+export default TabMenu;
