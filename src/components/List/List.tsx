@@ -40,7 +40,19 @@ const StyledList = styled.li`
   }
 `;
 
-function List({ children, ...rest }: any) {
+type ListProps = {
+  children?: JSX.Element;
+  index: number;
+  title: string;
+  description: string;
+  sightsTitle: string;
+  sights: string[];
+  img: string;
+  numColor?: string;
+  fontColor?: string;
+};
+
+function List({ children, ...rest }: ListProps) {
   return (
     <StyledList
       {...rest}

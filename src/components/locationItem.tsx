@@ -11,7 +11,7 @@ type LocationItemProps = {
 const LocationItem = ({ item, index }: LocationItemProps) => {
   return (
     <List
-      index={`0${index + 1}. `}
+      index={index}
       title={item.title}
       description={item.description}
       sightsTitle={"추천명소 : "}

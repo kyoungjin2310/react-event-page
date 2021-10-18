@@ -40,7 +40,7 @@ const StyledCard = styled.li`
     }
     .fontSize {
       margin-bottom: 0px;
-      font-size: 15px;
+      font-size: ${(props: any) => props.fontSize};
     }
   }
   .price {
@@ -66,7 +66,20 @@ const StyledCard = styled.li`
   }
 `;
 
-function Card({ children, ...rest }: any) {
+type CardProps = {
+  children?: JSX.Element;
+  category: string;
+  title: string;
+  ticketType: string;
+  imgUrl: string;
+  imgAlt: string;
+  discountPercent: string;
+  ticketPrice: string;
+  discountPrice: string;
+  fontSize?: string;
+};
+
+function Card({ children, ...rest }: CardProps) {
   return (
     <StyledCard {...rest}>
       <a href="#" title={`${rest.category} ${rest.title}`}>
