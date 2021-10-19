@@ -9,8 +9,8 @@ type LocationListProps = {
 const LocationList = ({ list }: LocationListProps) => {
   return (
     <ul className="locationList">
-      {list.map((item: Location, index: number) => (
-        <LocationItem item={item} index={index} key={item.id} />
+      {list.map((item: Location) => (
+        <LocationItem item={item} index={item.id} key={item.id} />
       ))}
     </ul>
   );

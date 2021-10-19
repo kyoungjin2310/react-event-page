@@ -60,7 +60,9 @@ function List({ children, ...rest }: ListProps) {
     >
       <div>
         <h3 className="locationTitle">
-          <span className="num">{rest.index}</span>
+          <span className="num">
+            {rest.index < 10 ? `0${rest.index}. ` : rest.index}
+          </span>
           <span>{rest.title}</span>
         </h3>
         <p>{rest.description}</p>
