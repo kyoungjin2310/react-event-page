@@ -34,7 +34,16 @@ const StyledMainTitle = styled.h1`
   }
 `;
 
-function MainTitle({ children, ...rest }: any) {
+type MainTitle = {
+  children?: JSX.Element;
+  imgUrl: string;
+  imgAlt: string;
+  text: string;
+  title: string;
+  color?: string;
+};
+
+function MainTitle({ children, ...rest }: MainTitle) {
   return (
     <StyledMainTitle {...rest}>
       <span className="jeju">

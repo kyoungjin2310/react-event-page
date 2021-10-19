@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const StyledMapTitle = styled.h2`
   margin-top: 45px;
@@ -14,7 +14,15 @@ const StyledMapTitle = styled.h2`
     color: ${(props: any) => props.color};
   }
 `;
-function MapTitle({ children, ...rest }: any) {
+
+type MapTitle = {
+  children?: JSX.Element;
+  pointText: string;
+  text: string;
+  color?: string;
+};
+
+function MapTitle({ children, ...rest }: MapTitle) {
   return (
     <StyledMapTitle {...rest}>
       <span className="fontColor">{rest.pointText}</span>

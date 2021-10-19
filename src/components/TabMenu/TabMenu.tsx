@@ -31,7 +31,13 @@ const StyledTabMenu = styled.h3`
     }
   }
 `;
-function TabMenu({ children, ...rest }: any) {
+
+type TabMenu = {
+  children?: JSX.Element;
+  bdColor?: string;
+};
+
+function TabMenu({ children, ...rest }: TabMenu) {
   return <StyledTabMenu {...rest}>{children}</StyledTabMenu>;
 }
 

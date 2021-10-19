@@ -32,7 +32,13 @@ const StyledButton = styled.button`
     `;
   }}
 `;
-function Button({ children, ...rest }: any) {
+
+type ButtonProps = {
+  children?: JSX.Element;
+  color?: string;
+};
+
+function Button({ children, ...rest }: ButtonProps) {
   return <StyledButton {...rest}>{children}</StyledButton>;
 }
 

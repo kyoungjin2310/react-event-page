@@ -40,7 +40,7 @@ const StyledCard = styled.li`
     }
     .fontSize {
       margin-bottom: 0px;
-      font-size: ${(props: any) => props.fontSize};
+      font-size: ${(props: any) => props.fontSize + "px"};
     }
   }
   .price {
@@ -76,7 +76,7 @@ type CardProps = {
   discountPercent: string;
   ticketPrice: string;
   discountPrice: string;
-  fontSize?: string;
+  fontSize?: number;
 };
 
 function Card({ children, ...rest }: CardProps) {
@@ -109,7 +109,7 @@ function Card({ children, ...rest }: CardProps) {
 }
 
 Card.defaultProps = {
-  fontSize: "15px",
+  fontSize: 15,
 };
 
 export default Card;
