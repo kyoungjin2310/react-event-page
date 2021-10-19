@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styled, { css } from "styled-components";
 
 const StyledTabMenu = styled.h3`
@@ -9,7 +9,7 @@ const StyledTabMenu = styled.h3`
   transition: 0.25s background-color ease;
 
   /* 색상 */
-  ${(props: any) => {
+  ${(props: TabMenu) => {
     const selected = props.bdColor;
     return css`
       border-top: 1px solid ${selected};
@@ -33,7 +33,7 @@ const StyledTabMenu = styled.h3`
 `;
 
 type TabMenu = {
-  children?: JSX.Element;
+  children?: ReactNode;
   bdColor?: string;
 };
 

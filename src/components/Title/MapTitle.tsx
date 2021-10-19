@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
 
 const StyledMapTitle = styled.h2`
@@ -11,12 +11,12 @@ const StyledMapTitle = styled.h2`
   text-shadow: 0px 4px 3px rgba($color: #000, $alpha: 0.2);
 
   .fontColor {
-    color: ${(props: any) => props.color};
+    color: ${(props: MapTitle) => props.color};
   }
 `;
 
 type MapTitle = {
-  children?: JSX.Element;
+  children?: ReactNode;
   pointText: string;
   text: string;
   color?: string;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
 
 const StyledMainTitle = styled.h1`
@@ -18,7 +18,7 @@ const StyledMainTitle = styled.h1`
   }
 
   .title {
-    color: ${(props: any) => props.color};
+    color: ${(props: MainTitle) => props.color};
     font-size: 79px;
     letter-spacing: -3px;
     font-weight: 800;
@@ -35,7 +35,7 @@ const StyledMainTitle = styled.h1`
 `;
 
 type MainTitle = {
-  children?: JSX.Element;
+  children?: ReactNode;
   imgUrl: string;
   imgAlt: string;
   text: string;
@@ -51,6 +51,7 @@ function MainTitle({ children, ...rest }: MainTitle) {
       </span>
       <span className="txt">{rest.text}</span>
       <span className="title">{rest.title}</span>
+      {children}
     </StyledMainTitle>
   );
 }

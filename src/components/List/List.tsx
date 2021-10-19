@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
 
 const StyledList = styled.li`
@@ -27,12 +27,12 @@ const StyledList = styled.li`
     color: #000;
 
     .num {
-      color: ${(props: any) => props.numColor};
+      color: ${(props: ListProps) => props.numColor};
       font-family: $Roboto;
     }
   }
   .fontColor {
-    color: ${(props: any) => props.fontColor};
+    color: ${(props: ListProps) => props.fontColor};
   }
   .locationImg {
     position: absolute;
@@ -41,7 +41,7 @@ const StyledList = styled.li`
 `;
 
 type ListProps = {
-  children?: JSX.Element;
+  children?: ReactNode;
   index: number;
   title: string;
   description: string;

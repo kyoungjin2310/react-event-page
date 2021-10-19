@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 const StyledCard = styled.li`
@@ -40,7 +40,7 @@ const StyledCard = styled.li`
     }
     .fontSize {
       margin-bottom: 0px;
-      font-size: ${(props: any) => props.fontSize + "px"};
+      font-size: ${(props: CardProps) => props.fontSize + "px"};
     }
   }
   .price {
@@ -67,7 +67,7 @@ const StyledCard = styled.li`
 `;
 
 type CardProps = {
-  children?: JSX.Element;
+  children?: ReactNode;
   category: string;
   title: string;
   ticketType: string;

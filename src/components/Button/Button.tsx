@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styled, { css } from "styled-components";
 
 const StyledButton = styled.button`
@@ -16,7 +16,7 @@ const StyledButton = styled.button`
   font-size: 14px;
   color: #fff;
   font-weight: 700;
-  background-color: ${(props) => props.color};
+  background-color: ${(props: ButtonProps) => props.color};
   transition: 0.25s ease;
 
   /* 색상 */
@@ -34,7 +34,7 @@ const StyledButton = styled.button`
 `;
 
 type ButtonProps = {
-  children?: JSX.Element;
+  children?: ReactNode;
   color?: string;
 };
 
