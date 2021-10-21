@@ -2,6 +2,7 @@ import React from "react";
 import { url } from "../apis/api";
 import Card from "./Card/Card";
 import { ThemeData } from "../apis/type";
+
 type TicketItemType = {
   item: ThemeData;
 };

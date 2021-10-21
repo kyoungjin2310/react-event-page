@@ -7,6 +7,7 @@ import ThemeList from "./components/ThemeList";
 import LocationList from "./components/LocationList";
 
 function App() {
+  const [loading, setLoading] = useState(false);
   const [data, setData] = useState({ location: [], themes: [] });
   const [isError, setIsError] = useState(false);
   const { location, themes } = data;

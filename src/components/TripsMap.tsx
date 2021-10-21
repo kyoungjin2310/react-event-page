@@ -1,6 +1,7 @@
 import React from "react";
 import { url } from "../apis/api";
 import MapTitle from "./Title/MapTitle";
+
 const TripsMap = () => {
   return (
     <div className="map">

@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
 const StyledCard = styled.li`
   float: left;
   width: 50%;

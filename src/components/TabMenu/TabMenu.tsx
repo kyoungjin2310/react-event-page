@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
 import styled, { css } from "styled-components";
-import { StringLiteralLike } from "typescript";
 
 const StyledTabMenu = styled.h3`
   background-color: #fff;

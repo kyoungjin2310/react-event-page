@@ -1,6 +1,7 @@
 import React from "react";
 import { url } from "../apis/api";
 import MainTitle from "./Title/MainTitle";
+
 const TitlePage = () => {
   return (
     <div className="main">
