@@ -50,6 +50,7 @@ type ListProps = {
   img: string;
   numColor?: string;
   fontColor?: string;
+  arr?: string;
 };
 
 function List({ children, ...rest }: ListProps) {
@@ -67,7 +68,7 @@ function List({ children, ...rest }: ListProps) {
         </h3>
         <p>{rest.description}</p>
         <p className="fontColor">
-          {rest.sightsTitle + ` `} {rest.sights}
+          {rest.sightsTitle + ` `} {rest.sights.join(", ")}
         </p>
         <p className="locationImg">
           <img src={rest.img} alt={rest.title} />
